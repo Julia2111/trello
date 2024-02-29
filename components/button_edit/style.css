@@ -1,0 +1,69 @@
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    border-radius: 15px;
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+.close {
+    color: gray;
+    cursor: pointer;
+    float: right;
+    margin-top: -15px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover
+{
+    color: black;
+}
+
+.ModalTittle
+{
+    cursor: pointer;
+    text-align: center;
+}
+
+.Description
+{
+    text-align: center;
+    width: 100%;
+    height: 125px;
+    margin-top: 25px;
+}
+
+.Text
+{
+    align-content: center;
+}
+
+.modal-button_cancel
+{
+    margin-left: 2%
+}
+
+.modal-button_confirm
+{
+    margin-left: 75%;
+}
+
+.Selection
+{
+    margin-top: 4%;
+}
