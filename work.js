@@ -1,6 +1,6 @@
-export const root = document.getElementById("root");
-export const header = createHeader();
-export const main = createMain();
+const root = document.getElementById("root");
+const header = createHeader();
+const main = createMain();
 
 root.append(header, main);
 
@@ -68,7 +68,7 @@ function createMain() {
 
   const sidebarUserImg = document.createElement("img"); //photo будет меняться??
   sidebarUserImg.classList.add("sidebar__user-img");
-  sidebarUserImg.src = "img/user.png";
+  sidebarUserImg.src = "components/img/user.png";
 
   const spanSidebar = document.createElement("span");
   spanSidebar.classList.add("sidebar__user-name");
