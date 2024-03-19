@@ -1,6 +1,6 @@
-import { addNewTask, modalButtonConfirm } from "../main/addTodo/addTodo.js"; //confirm
-import { modalInputTittle } from "../main/addTodo/addTodo.js"; //title input
-import { modalInputDescription } from "../main/addTodo/addTodo.js"; //textarea
+import { addNewTask, modalButtonConfirm } from "../main/addTodo/addTodo.js";
+import { modalInputTittle } from "../main/addTodo/addTodo.js";
+import { modalInputDescription } from "../main/addTodo/addTodo.js";
 import { tasks } from "../../index.js";
 import { countTasks } from "./counters.js";
 import { usersName } from "../../index.js";
@@ -47,7 +47,7 @@ export function initNewCard() {
     let tasksLocStorage = JSON.parse(localStorage.getItem("tasks")) || [];
     tasksLocStorage.push(newTask);
     localStorage.setItem("tasks", JSON.stringify(tasksLocStorage));
-    //card body
+
     const cardItem = createCustomElement(
       "div",
       "cards__item cards__item--todo"
@@ -62,7 +62,6 @@ export function initNewCard() {
     const cardTitleButtons = createCustomElement("div", "cards__title-buttons");
 
     const todoEditBtn = createCustomElement(
-      //TODO   EDIT BUTTON
       "button",
       "cards__title-button",
       "todoEditBtn"
@@ -72,7 +71,6 @@ export function initNewCard() {
     todoEditBtn.addEventListener("click", editBtn);
 
     const btnToDoDelete = createCustomElement(
-      //BUTTON DELETE    TODO
       "button",
       "cards__title-button",
       "btnDelTodo"
@@ -95,7 +93,6 @@ export function initNewCard() {
     }
 
     const InPrBtnBack = createCustomElement(
-      //iN PROGRESS    BACK
       "button",
       "cards__title-button",
       "todoDeleteBtn",
@@ -104,7 +101,6 @@ export function initNewCard() {
     InPrBtnBack.innerText += "Back";
     InPrBtnBack.addEventListener("click", backToTodo);
     const InPrBackComplete = createCustomElement(
-      // COMPLETE BUTTON     IN PROGRESS
       "button",
       "cards__title-button",
       "completeBtn"
@@ -113,50 +109,42 @@ export function initNewCard() {
     InPrBackComplete.addEventListener("click", transferCardDone);
     const itemDone = document.getElementById("cardBodyDone");
     const btnDoneDelete = createCustomElement(
-      //BUTTON DELETE    DONE
       "button",
       "cards__title-button",
       "btnDelDone"
     );
     btnDoneDelete.innerText += "DELETE";
     btnDoneDelete.addEventListener("click", deleteTasksDone);
-    /*TODO*/
+
     const cardsItemToDO = document.createElement("div");
     cardsItemToDO.classList.add("cards__item__todo", "cards__item--todo");
     cardsItemToDO.dataset.taskId = newTask.id;
-    /*IN PROGRESS*/
+
     const cardsItemToInPr = document.createElement("div");
     cardsItemToInPr.classList.add("cards__item", "cards__item--inProgress");
     cardsItemToInPr.dataset.taskId = newTask.id;
-    /*DONE*/
+
     const cardsItemDone = document.createElement("div");
     cardsItemDone.classList.add("cards__item", "cards__item--Done");
     cardsItemDone.dataset.taskId = newTask.id;
 
-    //<div class="cards__desc">
     const cardDesc = createCustomElement("div", "cards__desc");
 
-    //<span class="cards__desc-text">Description</span>
     const cardDescText = createCustomElement("span", "cards__desc-text");
     cardDescText.innerText = newTask.description;
 
-    //<button class="cards__desc-btn">></button>
     const cardDescButton = createCustomElement("button", "cards__desc-btn");
     cardDescButton.innerText = ">";
     cardDescButton.addEventListener("click", transferCard);
 
-    //<div class="cards__info">
     const cardInfo = createCustomElement("div", "cards__info");
 
-    //<span class="cards__user">user</span>
     const cardUser = createCustomElement("span", "cards__user");
     cardUser.innerText = usersName;
 
-    //<span class="cards__time">10:32</span>
     const cardTime = createCustomElement("span", "cards__time");
     cardTime.innerText = newTask.time;
 
-    //найти cardBody
     const cardBodyTodo = document.getElementById("cardBodyTodo");
 
     const cardBodyInProgress = document.getElementById("cardBodyInProgress");
@@ -185,7 +173,7 @@ export function initNewCard() {
       "cardBodyTodoBottom",
       "cardBodyTodoBottom"
     );
-    /*DONE*/
+
     const cardBodyDoneTop = createCustomElement(
       "div",
       "cardBodyDoneTop",
@@ -313,8 +301,8 @@ export function initNewCard() {
       closeSpan.className = "close";
       closeSpan.innerHTML = "&times;";
       closeSpan.addEventListener("click", () => {
-        modal.style.display = "none"; // скрывать модальное окно при клике на крестик
-        countTasks(); // вызов функции при закрытии модального окна
+        modal.style.display = "none";
+        countTasks();
       });
 
       const modalInputTittle = document.createElement("input");
@@ -348,7 +336,6 @@ export function initNewCard() {
       document.body.appendChild(modal);
       const btnEdit = document.getElementById("todoEditBtn");
 
-      /*listeners*/
       const closeBtn = document.getElementsByClassName("close")[0];
 
       btnEdit.addEventListener("click", function () {
@@ -356,7 +343,7 @@ export function initNewCard() {
           modal.style.display = "none";
         });
         modal.style.display = "block";
-        closeSpan.click(); // автоматически нажимаем на крестик при открытии модального окна
+        closeSpan.click();
       });
 
       modalButtonConfirm.addEventListener("click", () => {
