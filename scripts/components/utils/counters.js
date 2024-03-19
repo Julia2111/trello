@@ -2,7 +2,6 @@ import { tasks } from "../../index.js";
 
 export function countTasks() {
   const todoCounter = document.getElementById("toDoCounter");
-
   const inProgressCounter = document.getElementById("inProgressCounter");
   const doneCounter = document.getElementById("doneCounter");
 

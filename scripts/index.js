@@ -35,6 +35,7 @@ export const usersName = dataUsers.map((user) => user.name);
 export const idUsers = dataUsers.map((userId) => userId.id);
 
 async function getData(url) {
+  //utils
   const array = [];
   const response = await fetch(url);
   const data = await response.json();
@@ -42,8 +43,9 @@ async function getData(url) {
   return array;
 }
 
-export const selectionTodo = document.getElementById("selectUser");
+export const selectionTodo = document.getElementById("selectUser"); //вынести
 for (let i = 0; i < usersName.length; i++) {
+  //
   const option = document.createElement("option");
   option.id = "optionUser";
   option.innerText = usersName[i];

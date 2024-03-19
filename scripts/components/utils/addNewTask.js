@@ -6,6 +6,7 @@ import { countTasks } from "./counters.js";
 import { usersName } from "../../index.js";
 
 export function initNewCard() {
+  //cpomponents
   modalButtonConfirm.addEventListener("click", () => {
     const title = modalInputTittle.value.trim();
     const description = modalInputDescription.value.trim();
@@ -30,7 +31,7 @@ export function initNewCard() {
     }
     return element;
   }
-
+  /* вынести*/
   function createNewCard(title, description, idUsers, usersName) {
     modalInputTittle.innerText = "";
     modalInputDescription.innerText = "";
@@ -234,6 +235,7 @@ export function initNewCard() {
     );
 
     function transferCard() {
+      //add 1 func
       newTask.status = "inProgress";
       cardTitleText.innerText = newTask.editedTitle || newTask.title;
       cardsItemToDO.remove();
