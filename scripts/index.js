@@ -25,8 +25,8 @@ export const tasks = [];
 const URLTodos = "https://jsonplaceholder.typicode.com/todos";
 const URLUsers = "https://jsonplaceholder.typicode.com/users";
 
-const dataUsers = await getData(URLUsers).catch(notAdd);
-const dataTodos = await getData(URLTodos).catch(notAdd);
+const dataUsers = await getData(URLUsers);
+const dataTodos = await getData(URLTodos);
 const usersIdTodos = dataTodos.map((users) => users.userId);
 const todosStatus = dataTodos.map((stat) => stat.completed);
 
@@ -54,8 +54,4 @@ selectionTodo.addEventListener("change", addUserName);
 function addUserName() {
   const userName = document.getElementById("selectUser").value;
   return userName;
-}
-
-function notAdd() {
-  alert("SORRY! ERROR 404");
 }
