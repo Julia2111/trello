@@ -34,19 +34,13 @@ export function addNewTask() {
   closeSpan.className = "closeTodo";
   closeSpan.innerHTML = "&times;";
 
-  //Нужно найти title
-
   modalInputTittle.placeholder = "Tittle";
   modalInputTittle.className = "ModalTittleTodo";
   modalInputTittle.setAttribute("required", "");
 
-  //Нужно найти textarea
-
   modalInputDescription.className = "DescriptionTodo";
   modalInputDescription.placeholder = "Your Description";
   modalInputDescription.setAttribute("required", "");
-
-  //кнопка добавления новой задачи
 
   modalButtonConfirm.id = "confirmTodo";
   modalButtonConfirm.className = "modal-button_confirmTodo";
@@ -77,7 +71,7 @@ export function addNewTask() {
   document.body.appendChild(modal);
 
   const closeBtn = document.getElementsByClassName("closeTodo")[0];
-  ///////////////////////////////////////////////////////////////////////////////////
+  /////
 
   btnAddTodo.addEventListener("click", function () {
     modal.style.display = "block";
