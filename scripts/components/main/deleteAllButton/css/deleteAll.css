@@ -1,0 +1,57 @@
+.modalDeleteAll {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-contentDeleteAll {
+  border-radius: 15px;
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.WarningDeleteAll {
+  font-size: 30px;
+  font-weight: bold;
+}
+.confirmText {
+  width: 270px;
+  height: 30px;
+  color: blueviolet;
+}
+.modal-button_confirmDeleteAll,
+.modal-button_cancelDeleteAll {
+  width: 110px;
+  height: 30px;
+  border-radius: 10px;
+  border-color: aliceblue;
+}
+.modal-button_confirmDeleteAll:hover {
+  background-color: blueviolet;
+  color: aliceblue;
+}
+.modal-button_cancelDeleteAll:hover {
+  background-color: rgb(187, 17, 17);
+  color: aliceblue;
+}
+.containerButtons {
+  width: 60%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}

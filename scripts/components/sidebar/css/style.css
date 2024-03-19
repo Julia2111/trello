@@ -1,0 +1,84 @@
+.sidebar {
+  position: fixed;
+  padding: 15px 10px;
+  top: 0;
+  height: 100%;
+  background-color: rgba(22, 22, 22, 0.8);
+  width: 160px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  overflow-x: hidden;
+  transition: 0.3s;
+}
+
+.sidebar__user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar__user-img:hover,
+.header__time:hover,
+.header__entry:hover,
+.cards__title:hover {
+  box-shadow: 0px 0px 20px 5px rgba(248, 20, 233, 0.7);
+}
+
+.sidebar__wrapper {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.sidebar__user-wrapper {
+  background-color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.sidebar__user-img {
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.sidebar__menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sidebar__menu-item {
+  transition: color 0.2s ease;
+}
+
+.sidebar__menu-item:hover {
+  color: #dba4ff;
+}
+
+.sidebar__menu-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sidebar__menu-text {
+  font-size: 15px;
+}
+
+.bxs-dashboard,
+.bxs-grid,
+.bxs-group {
+  font-size: 24px;
+}

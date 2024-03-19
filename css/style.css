@@ -1,0 +1,87 @@
+@import url("../scripts/components/main/addTodo/css/style.css");
+@import url("../scripts/components/main/buttonEdit/css/style.css");
+@import url("../scripts/components/main/deleteAllButton/css/deleteAll.css");
+@import url("../scripts/components/header/authorization/style.css");
+@import url("../scripts/components/sidebar/css/style.css");
+@import url("../scripts/components/header/css/style.css");
+@import url("../scripts/components/sidebar/css/style.css");
+@import url("../scripts/components/cards/css/style.css");
+
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #000;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.none {
+  display: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main {
+  background-color: hsl(270, 2%, 84%);
+  margin-top: 15px;
+  height: 100wh;
+}

@@ -1,0 +1,311 @@
+@import "_vars.scss";
+@import "_fonts.scss";
+@import "_global.scss";
+@import "_libs.scss";
+@import "_reset.scss";
+@import "_mixins.scss";
+@import "_media.scss";
+
+.header {
+  background: linear-gradient(135deg, #ff6b6b, #ffa8a8, #ffd3d3, #fffae6);
+  &__inner {
+    @include rowSpaceBetween;
+    align-items: center;
+    padding: 40px 50px;
+    border-radius: 8px;
+  }
+
+  &__time {
+    border: 1px solid black;
+    padding: 10px 15px;
+    border-radius: 7px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__join {
+    background-color: transparent;
+    border-radius: 20px;
+    border: 1px solid #2f0101;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: #fffae6;
+    }
+  }
+
+  &__entry {
+    background-color: transparent;
+    padding: 8px 15px;
+    @include flexRow;
+    align-items: center;
+    gap: 7px;
+    border-radius: 20px;
+    border: 1px solid #2f0101;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: #fffae6;
+    }
+  }
+}
+
+.bx-user-circle {
+  font-size: 24px;
+}
+
+.main {
+  background-color: hsl(0, 40%, 80%);
+  margin-top: 15px;
+}
+
+.sidebar {
+  position: fixed;
+  padding: 15px 10px;
+  top: 0;
+  height: 100%;
+  background-color: rgba(22, 22, 22, 0.8);
+  width: 160px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  overflow-x: hidden;
+  transition: 0.3s;
+  &__user {
+    @include flexColumn;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__wrapper {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    @include flexRow;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__user-wrapper {
+    background-color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    @include flexRow;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__user-img {
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  &__menu-list {
+    @include flexColumn;
+    gap: 30px;
+  }
+
+  &__menu-item {
+    transition: color 0.2s ease;
+    &:hover {
+      color: #ff6b6b;
+    }
+  }
+
+  &__menu-link {
+    @include flexRow;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__menu-text {
+    font-size: 15px;
+  }
+}
+
+.bxs-dashboard,
+.bxs-grid,
+.bxs-group {
+  font-size: 24px;
+}
+
+.cards {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  @include rowSpaceBetween;
+  &__col {
+    width: 360px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+  }
+
+  &__header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  &__header--todo {
+    background-color: #ff6b6b;
+  }
+
+  &__header--inProgress {
+    background-color: #ffa8a8;
+  }
+
+  &__header--done {
+    background-color: #ffd3d3;
+  }
+
+  &__body {
+    height: 450px;
+    overflow-y: auto;
+    padding-bottom: 15px;
+  }
+
+  &__item {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    @include flexColumn;
+    gap: 10px;
+    &:hover {
+      animation: bounce 0.2s ease-in-out 1; // 1 раз
+    }
+  }
+
+  &__item--todo {
+    background-color: #ff6b6b;
+  }
+
+  &__item--inProgress {
+    background-color: #ffa8a8;
+  }
+
+  &__item--done {
+    background-color: #ffd3d3;
+  }
+
+  &__title {
+    @include rowSpaceBetween;
+  }
+
+  &__title-buttons {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__title-button {
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.1s linear;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    &:hover {
+      background-color: #b3b3b3;
+    }
+  }
+
+  &__desc {
+    @include rowSpaceBetween;
+    align-items: center;
+    height: 40px; //временная мера, т.к. в первой колонке есть кнопка, а во вторых ее нет, соотвественно высота разная в трех колонках получается
+  }
+
+  &__desc-btn {
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.1s linear;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    &:hover {
+      background-color: #b3b3b3;
+    }
+  }
+
+  &__info {
+    @include rowSpaceBetween;
+  }
+
+  &__time {
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  &__btn {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    padding: 20px 0;
+    cursor: pointer;
+    transition: background-color 0.1s linear, box-shadow 0.1s linear;
+  }
+
+  &__btn--todo {
+    background-color: #ff6b6b;
+    &:hover {
+      background-color: #ff5050;
+      box-shadow: 0px 0px 10px rgba(255, 107, 107, 0.7);
+    }
+  }
+
+  &__btn--done {
+    background-color: #ffd3d3;
+    &:hover {
+      background-color: #ffb8b8;
+      box-shadow: 0px 0px 10px rgba(255, 107, 107, 0.7);
+    }
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+/*addnewTask*/
+.cards__title-button {
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.1s linear;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+.cards__title-button:hover {
+  background-color: #b3b3b3;
+}
+.modal-content_low {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
